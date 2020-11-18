@@ -5,6 +5,15 @@
     <string name="omen">فال</string>
     <string name="search">جستجو</string>
     <string name="notebook">دفترچه</string>
+    <string name="omenString">
+        ای حافظ شیرازی
+        \n
+         تو محرم هر رازی
+        \n
+        تو را به خدا و شاخه نباتت قسم می دهم که هر چه صلاح و مصلحت می بینی برایم آشکار و ارزوی مرا براورده سازی
+    </string>
+    <string name="takeOmen">نیت کنید و لمس کنید </string>
+
 
 
 </resources>

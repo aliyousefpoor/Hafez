@@ -6,7 +6,7 @@
 
     <include
         android:id="@+id/pagerAppBar"
-        layout="@layout/page_app_bar" />
+        layout="@layout/page_appbar" />
 
     <TextView
         android:layout_width="wrap_content"
