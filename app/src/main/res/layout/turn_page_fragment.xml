@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<include
-    android:id="@+id/pagerAppBar"
-    layout="@layout/page_app_bar"
-    />
+    <include
+        android:id="@+id/pagerAppBar"
+        layout="@layout/page_app_bar" />
+
     <app.num.numandroidpagecurleffect.PageCurlView
         android:id="@+id/turnPage"
         android:layout_width="match_parent"
