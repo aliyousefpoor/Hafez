@@ -10,5 +10,15 @@
         android:name="com.example.hafez.ListFragment"
         android:label="ListFragment"
         tools:layout="@layout/list_fragment"
+        >
+        <action
+            android:id="@+id/action_listFragment2_to_turnPageFragment3"
+            app:destination="@id/turnPageFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/turnPageFragment3"
+        android:name="com.example.hafez.TurnPageFragment"
+        android:label="TurnPageFragment"
+        tools:layout="@layout/turn_page_fragment"
         />
 </navigation>

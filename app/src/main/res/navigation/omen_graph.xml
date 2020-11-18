@@ -10,5 +10,15 @@
         android:name="com.example.hafez.OmenFragment"
         android:label="OmenFragment"
         tools:layout="@layout/omen_fragment"
+        >
+        <action
+            android:id="@+id/action_omenFragment2_to_turnPageFragment5"
+            app:destination="@id/turnPageFragment5" />
+    </fragment>
+    <fragment
+        android:id="@+id/turnPageFragment5"
+        android:name="com.example.hafez.TurnPageFragment"
+        android:label="TurnPageFragment"
+        tools:layout="@layout/turn_page_fragment"
         />
 </navigation>

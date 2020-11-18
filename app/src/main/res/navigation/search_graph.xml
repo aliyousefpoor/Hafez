@@ -9,6 +9,14 @@
         android:id="@+id/searchFragment2"
         android:name="com.example.hafez.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/search_fragment"
-        />
+        tools:layout="@layout/search_fragment">
+        <action
+            android:id="@+id/action_searchFragment2_to_turnPageFragment6"
+            app:destination="@id/turnPageFragment6" />
+    </fragment>
+    <fragment
+        android:id="@+id/turnPageFragment6"
+        android:name="com.example.hafez.TurnPageFragment"
+        android:label="TurnPageFragment"
+        tools:layout="@layout/turn_page_fragment" />
 </navigation>

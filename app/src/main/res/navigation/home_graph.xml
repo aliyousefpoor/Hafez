@@ -10,5 +10,15 @@
         android:name="com.example.hafez.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/home_fragment"
+        >
+        <action
+            android:id="@+id/action_homeFragment2_to_turnPageFragment2"
+            app:destination="@id/turnPageFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/turnPageFragment2"
+        android:name="com.example.hafez.TurnPageFragment"
+        android:label="TurnPageFragment"
+        tools:layout="@layout/turn_page_fragment"
         />
 </navigation>

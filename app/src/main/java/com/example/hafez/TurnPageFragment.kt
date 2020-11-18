@@ -28,8 +28,7 @@ class TurnPageFragment : Fragment() {
         pageNumber = view.findViewById(R.id.poemNumber)
         images = ArrayList()
 
-        images.add(R.drawable.white)
-        images.add(R.drawable.white)
+        images.add(R.drawable.iran)
         images.add(R.drawable.white)
 
         pageCurlView.setCurlView(images)
