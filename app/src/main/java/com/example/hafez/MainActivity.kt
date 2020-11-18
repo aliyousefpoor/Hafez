@@ -8,6 +8,7 @@ import androidx.navigation.Navigation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var mainNavHost: View
     private lateinit var homeNavHost: View
     private lateinit var listNavHost: View
     private lateinit var omenNavHost: View
@@ -19,15 +20,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mainNavHost = findViewById(R.id.mainNavHostFragment)
         homeNavHost = findViewById(R.id.homeNavHostFragment)
         listNavHost = findViewById(R.id.listNavHostFragment)
         omenNavHost = findViewById(R.id.omenNavHostFragment)
         searchNavHost = findViewById(R.id.searchNavHostFragment)
         noteNavHost = findViewById(R.id.noteNavHostFragment)
         bottomNavigation = findViewById(R.id.bottomNavigation)
-        navController = Navigation.findNavController(this, R.id.noteNavHostFragment)
+        navController = Navigation.findNavController(this, R.id.mainNavHostFragment)
 
 
+        mainNavHost.visibility= View.VISIBLE
         homeNavHost.visibility = View.GONE
         listNavHost.visibility = View.GONE
         omenNavHost.visibility = View.GONE
@@ -44,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                     omenNavHost.visibility = View.GONE
                     searchNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
+                    mainNavHost.visibility= View.GONE
                     true
                 }
                 R.id.listFragment -> {
@@ -53,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                     omenNavHost.visibility = View.GONE
                     searchNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
+                    mainNavHost.visibility= View.GONE
                     true
                 }
                 R.id.omenFragment -> {
@@ -62,6 +67,7 @@ class MainActivity : AppCompatActivity() {
                     listNavHost.visibility = View.GONE
                     searchNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
+                    mainNavHost.visibility= View.GONE
                     true
                 }
                 R.id.searchFragment -> {
@@ -71,6 +77,7 @@ class MainActivity : AppCompatActivity() {
                     listNavHost.visibility = View.GONE
                     omenNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
+                    mainNavHost.visibility= View.GONE
                     true
                 }
                 R.id.noteFragment -> {
@@ -80,6 +87,7 @@ class MainActivity : AppCompatActivity() {
                     homeNavHost.visibility = View.GONE
                     listNavHost.visibility = View.GONE
                     omenNavHost.visibility = View.GONE
+                    mainNavHost.visibility= View.GONE
                     true
                 }
                 else -> {
