@@ -29,8 +29,10 @@ class MainActivity : AppCompatActivity() {
         bottomNavigation = findViewById(R.id.bottomNavigation)
         navController = Navigation.findNavController(this, R.id.mainNavHostFragment)
 
+        bottomNavigation.selectedItemId == null
 
-        mainNavHost.visibility= View.VISIBLE
+
+        mainNavHost.visibility = View.VISIBLE
         homeNavHost.visibility = View.GONE
         listNavHost.visibility = View.GONE
         omenNavHost.visibility = View.GONE
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                     omenNavHost.visibility = View.GONE
                     searchNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
-                    mainNavHost.visibility= View.GONE
+                    mainNavHost.visibility = View.GONE
                     true
                 }
                 R.id.listFragment -> {
@@ -57,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                     omenNavHost.visibility = View.GONE
                     searchNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
-                    mainNavHost.visibility= View.GONE
+                    mainNavHost.visibility = View.GONE
                     true
                 }
                 R.id.omenFragment -> {
@@ -67,7 +69,7 @@ class MainActivity : AppCompatActivity() {
                     listNavHost.visibility = View.GONE
                     searchNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
-                    mainNavHost.visibility= View.GONE
+                    mainNavHost.visibility = View.GONE
                     true
                 }
                 R.id.searchFragment -> {
@@ -77,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                     listNavHost.visibility = View.GONE
                     omenNavHost.visibility = View.GONE
                     noteNavHost.visibility = View.GONE
-                    mainNavHost.visibility= View.GONE
+                    mainNavHost.visibility = View.GONE
                     true
                 }
                 R.id.noteFragment -> {
@@ -87,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                     homeNavHost.visibility = View.GONE
                     listNavHost.visibility = View.GONE
                     omenNavHost.visibility = View.GONE
-                    mainNavHost.visibility= View.GONE
+                    mainNavHost.visibility = View.GONE
                     true
                 }
                 else -> {

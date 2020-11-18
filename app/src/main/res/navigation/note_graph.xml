@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/note_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_graph"
+    app:startDestination="@id/noteFragment2">
 
+    <fragment
+        android:id="@+id/noteFragment2"
+        android:name="com.example.hafez.NoteFragment"
+        android:label="NoteFragment"
+        tools:layout="@layout/note_fragment"
+        />
 </navigation>

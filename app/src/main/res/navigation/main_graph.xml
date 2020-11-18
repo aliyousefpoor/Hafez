@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
 
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.hafez.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_turnPageFragment"
+            app:destination="@id/turnPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/turnPageFragment"
+        android:name="com.example.hafez.TurnPageFragment"
+        android:label="TurnPageFragment"
+        tools:layout="@layout/turn_page_fragment" />
 </navigation>
