@@ -23,7 +23,7 @@ class SearchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        goToTurnPage = view.findViewById(R.id.goToPager)
+        goToTurnPage = view.findViewById(R.id.showBubble)
         navController = Navigation.findNavController(view)
 
         goToTurnPage.setOnClickListener {

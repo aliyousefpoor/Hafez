@@ -7,5 +7,9 @@
     <color name="black">#111</color>
     <color name="gray">#A3A3A3</color>
     <color name="lightGray">#C6C6C6</color>
+    <color name="lighterGray">#EAEAEA</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFBF00</color>
+
 
 </resources>
