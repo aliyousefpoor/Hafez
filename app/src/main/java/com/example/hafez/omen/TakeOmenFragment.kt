@@ -45,17 +45,26 @@ class TakeOmenFragment : Fragment() {
         comment.visibility = View.GONE
 
         showBubble.setOnClickListener {
-            if (commentBubble.visibility == View.GONE) {
+            if (commentBubble.visibility == View.GONE && comment.text.isNotEmpty()) {
                 showBubble.setImageResource(R.drawable.here_pressed)
                 commentBubble.visibility = View.VISIBLE
                 commentHeart.visibility = View.VISIBLE
                 comment.visibility = View.VISIBLE
-            } else {
-//                showBubble.setImageResource(R.drawable.here)
+            } else if (commentBubble.visibility == View.GONE && comment.text.isEmpty()) {
+                showBubble.setImageResource(R.drawable.here)
+                commentBubble.visibility = View.VISIBLE
+                commentHeart.visibility = View.VISIBLE
+                comment.visibility = View.VISIBLE
+            } else if (commentBubble.visibility == View.VISIBLE && comment.text.isNotEmpty()) {
+                showBubble.setImageResource(R.drawable.here_pressed)
                 commentBubble.visibility = View.GONE
                 commentHeart.visibility = View.GONE
                 comment.visibility = View.GONE
-//                commentHeart.setImageResource(R.drawable.favorite)
+            } else {
+                showBubble.setImageResource(R.drawable.here)
+                commentBubble.visibility = View.GONE
+                commentHeart.visibility = View.GONE
+                comment.visibility = View.GONE
             }
         }
 
