@@ -7,13 +7,16 @@
 
     <fragment
         android:id="@+id/omenFragment2"
-        android:name="com.example.hafez.OmenFragment"
+        android:name="com.example.hafez.omen.OmenFragment"
         android:label="OmenFragment"
         tools:layout="@layout/omen_fragment"
         >
         <action
             android:id="@+id/action_omenFragment2_to_turnPageFragment5"
             app:destination="@id/turnPageFragment5" />
+        <action
+            android:id="@+id/action_omenFragment2_to_takeOmenFragment"
+            app:destination="@id/takeOmenFragment" />
     </fragment>
     <fragment
         android:id="@+id/turnPageFragment5"
@@ -21,4 +24,24 @@
         android:label="TurnPageFragment"
         tools:layout="@layout/turn_page_fragment"
         />
+    <fragment
+        android:id="@+id/takeOmenFragment"
+        android:name="com.example.hafez.omen.TakeOmenFragment"
+        android:label="TakeOmenFragment"
+        tools:layout="@layout/take_omen_fragment"
+        >
+        <action
+            android:id="@+id/action_takeOmenFragment_to_interpretationFragment"
+            app:destination="@id/interpretationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interpretationFragment"
+        android:name="com.example.hafez.omen.InterpretationFragment"
+        android:label="InterpretationFragment"
+        tools:layout="@layout/interpretation_fragment"
+        >
+        <action
+            android:id="@+id/action_interpretationFragment_to_takeOmenFragment"
+            app:destination="@id/takeOmenFragment" />
+    </fragment>
 </navigation>

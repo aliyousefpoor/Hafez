@@ -1,4 +1,4 @@
-package com.example.hafez
+package com.example.hafez.omen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,10 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.example.hafez.R
 
-class NoteFragment:Fragment() {
-    private lateinit var goToTurnPage: ImageView
+class InterpretationFragment : Fragment() {
+    private lateinit var close: ImageView
     private lateinit var navController: NavController
 
     override fun onCreateView(
@@ -18,15 +19,16 @@ class NoteFragment:Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.note_fragment, container, false)
+        return inflater.inflate(R.layout.interpretation_fragment, container, false)
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        goToTurnPage = view.findViewById(R.id.showBubble)
+        close = view.findViewById(R.id.closeInterpretation)
         navController = Navigation.findNavController(view)
 
-        goToTurnPage.setOnClickListener {
-            navController.navigate(R.id.action_noteFragment2_to_turnPageFragment4)
+        close.setOnClickListener {
+            navController.navigate(R.id.action_interpretationFragment_to_takeOmenFragment)
         }
     }
 }

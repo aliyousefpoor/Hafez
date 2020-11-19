@@ -1,0 +1,43 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:bottom="600dp"
+        >
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="@color/gray"
+                android:endColor="@color/gray"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="333dp"
+        >
+        <rotate
+            android:fromDegrees="65"
+            android:toDegrees="65"
+            android:pivotX="109%"
+            android:pivotY="8%" >
+            <shape
+                android:shape="rectangle" >
+                <stroke android:color="@color/gray" android:width="10dp"/>
+                <solid
+                    android:color="@color/gray" />
+            </shape>
+        </rotate>
+    </item>
+<!--    <item android:id="@+id/rightArrow">-->
+<!--        <rotate-->
+<!--            android:fromDegrees="220"-->
+<!--            android:toDegrees="0"-->
+<!--            android:pivotX="35%"-->
+<!--            android:pivotY="5%" >-->
+<!--            <shape-->
+<!--                android:shape="rectangle" >-->
+<!--                <stroke android:color="@color/white" android:width="1dp"/>-->
+<!--                <solid-->
+<!--                    android:color="@color/white" />-->
+<!--            </shape>-->
+<!--        </rotate>-->
+<!--    </item>-->
+</layer-list>
