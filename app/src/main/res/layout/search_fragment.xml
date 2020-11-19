@@ -11,13 +11,22 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
-        android:hint="@string/search"
         android:background="@drawable/custom_input"
         android:drawableEnd="@drawable/search_style"
+        android:hint="@string/search"
         android:paddingEnd="15dp"
         android:textDirection="rtl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/searchEditText"
+        app:layout_constraintTop_toTopOf="@id/searchEditText"
+        app:layout_constraintBottom_toBottomOf="@id/searchEditText"
+        android:src="@drawable/search"/>
 
     <ImageView
         android:id="@+id/closeSearch"
@@ -63,7 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:text="غزل ها"
+                android:text="@string/poems"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/poemIcon"
@@ -89,6 +98,14 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/poemIcon" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/line3"
+                app:layout_constraintTop_toBottomOf="@id/line2" />
 
             <LinearLayout
                 android:id="@+id/poemLayout"
@@ -121,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:text="شرح و معنی"
+                android:text="@string/explainAndMean"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/meanIcon"
@@ -129,15 +146,39 @@
                 app:layout_constraintTop_toTopOf="@id/meanIcon" />
 
             <TextView
-                android:id="@+id/meanCount"
+                android:id="@+id/braces3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:text="(۵)"
+                android:text="("
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/meanIcon"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/meanIcon" />
+
+            <TextView
+                android:id="@+id/meanCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:text="۵"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/meanIcon"
+                app:layout_constraintStart_toEndOf="@id/braces3"
+                app:layout_constraintTop_toTopOf="@id/meanIcon" />
+
+            <TextView
+                android:id="@+id/braces4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text=")"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/meanIcon"
+                app:layout_constraintStart_toEndOf="@id/meanCount"
                 app:layout_constraintTop_toTopOf="@id/meanIcon" />
 
             <ImageView
@@ -147,6 +188,19 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/gray"
                 app:layout_constraintTop_toBottomOf="@id/meanIcon" />
+
+            <TextView
+                android:id="@+id/example"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:layout_marginStart="30dp"
+                android:text="@string/example"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

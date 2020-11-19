@@ -10,7 +10,13 @@
     <color name="lighterGray">#EAEAEA</color>
     <color name="red">#FF0000</color>
     <color name="gold">#FFBF00</color>
-    <color name="blue">#0363AF</color>
-    <color name="green">#105048</color>
+    <color name="blue">#035A9F</color>
+    <color name="rippleBlue">#D5E8F6</color>
+    <color name="green">#134A43</color>
+    <color name="rippleGreen">#D7F8DD</color>
+    <color name="rippleRed">#FAD9DD</color>
+    <color name="darkGray">#676666</color>
+
+
 
 </resources>
