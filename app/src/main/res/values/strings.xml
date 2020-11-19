@@ -49,6 +49,14 @@
         سعی کن تعادلت رو در هر صورت حفظ کنی.
     </string>
     <string name="search">جستجو</string>
+    <string name="remove">حذف</string>
+    <string name="save">ذخیره</string>
+    <string name="notes">یادداشت ها</string>
+    <string name="removeNote">
+        این یادداشت واقعا حذف شود ؟
+    </string>
+    <string name="signs">نشانه ها</string>
+    <string name="cancel">انصراف</string>
 
 
 </resources>
