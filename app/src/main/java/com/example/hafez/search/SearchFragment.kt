@@ -20,7 +20,6 @@ import java.util.ArrayList
 
 class SearchFragment : Fragment() {
     private lateinit var close: ImageView
-    private lateinit var searchIcon: ImageView
     private lateinit var search: EditText
     private lateinit var navController: NavController
     private lateinit var recyclerView: RecyclerView
@@ -40,7 +39,6 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         close = view.findViewById(R.id.closeSearch)
-        searchIcon = view.findViewById(R.id.searchIcon)
         search = view.findViewById(R.id.searchEditText)
         navController = Navigation.findNavController(view)
         recyclerView = view.findViewById(R.id.searchRecyclerView)
@@ -50,7 +48,7 @@ class SearchFragment : Fragment() {
         search.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 close.setImageResource(R.drawable.close)
-//                filterWord(s.toString())
+                filterWord(s.toString())
                 highLight(s.toString())
             }
 
@@ -69,9 +67,6 @@ class SearchFragment : Fragment() {
             close.setImageResource(R.color.white)
         }
 
-        searchIcon.setOnClickListener {
-
-        }
         val arrayList: MutableList<String> = ArrayList()
         adapter = SearchAdapter(arrayList, requireContext())
         recyclerView.adapter = adapter
@@ -80,7 +75,7 @@ class SearchFragment : Fragment() {
     }
 
 
-    fun filterWord(stringList: String) {
+    private fun filterWord(stringList: String) {
 
         searchItem = ArrayList()
 

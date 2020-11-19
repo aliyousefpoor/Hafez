@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.hafez.R
+import kotlinx.android.synthetic.main.take_omen_fragment.view.*
 
 class TakeOmenFragment : Fragment() {
     private lateinit var showBubble: ImageView
@@ -18,6 +19,7 @@ class TakeOmenFragment : Fragment() {
     private lateinit var commentHeart: ImageView
     private lateinit var comment: EditText
     private lateinit var interpretation: TextView
+    private lateinit var poem: TextView
     private lateinit var navController: NavController
     var isClicked = false
 
@@ -35,11 +37,11 @@ class TakeOmenFragment : Fragment() {
         commentBubble = view.findViewById(R.id.commentBubble)
         commentHeart = view.findViewById(R.id.commentHeart)
         comment = view.findViewById(R.id.commentEditText)
+        poem = view.findViewById(R.id.takeOmenPoem)
         interpretation = view.findViewById(R.id.omenInterpretation)
         navController = Navigation.findNavController(view)
 
-
-
+        poem.setTextIsSelectable(true)
         commentBubble.visibility = View.GONE
         commentHeart.visibility = View.GONE
         comment.visibility = View.GONE

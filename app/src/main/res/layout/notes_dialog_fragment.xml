@@ -33,7 +33,9 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/simple_style"
         android:gravity="right"
+        android:inputType="text"
         android:padding="8dp"
+        android:textDirection="rtl"
         app:layout_constraintEnd_toEndOf="@id/notesDialogTitle"
         app:layout_constraintStart_toStartOf="@id/closeNotesDialog"
         app:layout_constraintTop_toBottomOf="@id/notesDialogTitle" />

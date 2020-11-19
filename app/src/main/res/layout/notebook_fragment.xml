@@ -18,7 +18,7 @@
         android:drawableEnd="@drawable/search_style"
         android:textDirection="rtl"
         android:paddingHorizontal="10dp"
-        android:hint="جستجو"
+        android:hint="@string/search"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -18,15 +18,6 @@
         android:textDirection="rtl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <ImageView
-        android:id="@+id/searchIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/searchEditText"
-        app:layout_constraintTop_toTopOf="@id/searchEditText"
-        app:layout_constraintBottom_toBottomOf="@id/searchEditText"
-        android:src="@drawable/search"/>
 
     <ImageView
         android:id="@+id/closeSearch"
