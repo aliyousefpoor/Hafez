@@ -19,20 +19,20 @@ class TurnPageFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.turn_page_fragment, container, false)
+        return inflater.inflate(R.layout.turn_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        pageCurlView = view.findViewById(R.id.turnPage)
-        pageNumber = view.findViewById(R.id.poemNumber)
-        images = ArrayList()
-
-        images.add(R.drawable.iran)
-        images.add(R.drawable.white)
-
-        pageCurlView.setCurlView(images)
-        pageCurlView.setCurlSpeed(600)
+//        pageCurlView = view.findViewById(R.id.turnPage)
+//        pageNumber = view.findViewById(R.id.poemNumber)
+//        images = ArrayList()
+//
+//        images.add(R.drawable.iran)
+//        images.add(R.drawable.white)
+//
+//        pageCurlView.setCurlView(images)
+//        pageCurlView.setCurlSpeed(600)
     }
 
 }
