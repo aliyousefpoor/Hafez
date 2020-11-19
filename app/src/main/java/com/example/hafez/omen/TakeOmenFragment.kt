@@ -6,7 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import com.example.hafez.R
 
 class TakeOmenFragment : Fragment() {
@@ -14,7 +17,9 @@ class TakeOmenFragment : Fragment() {
     private lateinit var commentBubble: ImageView
     private lateinit var commentHeart: ImageView
     private lateinit var comment: EditText
-
+    private lateinit var interpretation: TextView
+    private lateinit var navController: NavController
+    var isClicked = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,6 +35,10 @@ class TakeOmenFragment : Fragment() {
         commentBubble = view.findViewById(R.id.commentBubble)
         commentHeart = view.findViewById(R.id.commentHeart)
         comment = view.findViewById(R.id.commentEditText)
+        interpretation = view.findViewById(R.id.omenInterpretation)
+        navController = Navigation.findNavController(view)
+
+
 
         commentBubble.visibility = View.GONE
         commentHeart.visibility = View.GONE
@@ -42,17 +51,26 @@ class TakeOmenFragment : Fragment() {
                 commentHeart.visibility = View.VISIBLE
                 comment.visibility = View.VISIBLE
             } else {
-                showBubble.setImageResource(R.drawable.here)
+//                showBubble.setImageResource(R.drawable.here)
                 commentBubble.visibility = View.GONE
                 commentHeart.visibility = View.GONE
                 comment.visibility = View.GONE
-                commentHeart.setImageResource(R.drawable.favorite)
-                comment.text.clear()
+//                commentHeart.setImageResource(R.drawable.favorite)
             }
         }
 
         commentHeart.setOnClickListener {
-            commentHeart.setImageResource(R.drawable.favorite_pressed)
+            isClicked = if (!isClicked) {
+                commentHeart.setImageResource(R.drawable.favorite_pressed)
+                true
+            } else {
+                commentHeart.setImageResource(R.drawable.favorite)
+                false
+            }
+        }
+
+        interpretation.setOnClickListener {
+            navController.navigate(R.id.action_takeOmenFragment_to_interpretationFragment)
         }
     }
 }
