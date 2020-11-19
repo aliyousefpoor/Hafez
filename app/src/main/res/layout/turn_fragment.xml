@@ -6,7 +6,7 @@
 
     <include
         android:id="@+id/appBar"
-        layout="@layout/page_app_bar" />
+        layout="@layout/page_appbar" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

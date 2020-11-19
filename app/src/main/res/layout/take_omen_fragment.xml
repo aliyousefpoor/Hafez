@@ -44,7 +44,7 @@
                 android:layout_width="160dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
-                android:background="@drawable/custom_input"
+                android:background="@drawable/comment_style"
                 android:hint="بنویسید"
                 android:padding="4sp"
                 android:textDirection="rtl"

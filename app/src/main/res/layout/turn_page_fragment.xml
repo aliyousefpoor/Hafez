@@ -6,7 +6,7 @@
 
 <include
     android:id="@+id/pagerAppBar"
-    layout="@layout/page_app_bar"
+    layout="@layout/page_appbar"
     />
     <app.num.numandroidpagecurleffect.PageCurlView
         android:id="@+id/turnPage"
