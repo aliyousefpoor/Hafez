@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         bottomNavigation = findViewById(R.id.bottomNavigation)
         navController = Navigation.findNavController(this, R.id.mainNavHostFragment)
 
-        bottomNavigation.selectedItemId == null
 
 
         mainNavHost.visibility = View.VISIBLE
