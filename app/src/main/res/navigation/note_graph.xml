@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/noteFragment2"
-        android:name="com.example.hafez.note.NoteFragment"
+        android:name="com.example.hafez.note.NoteBookFragment"
         android:label="NoteFragment"
-        tools:layout="@layout/note_fragment"
+        tools:layout="@layout/notebook_fragment"
         >
         <action
             android:id="@+id/action_noteFragment2_to_turnPageFragment4"

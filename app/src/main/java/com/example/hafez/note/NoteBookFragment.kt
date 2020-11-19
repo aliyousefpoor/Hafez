@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -13,7 +12,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.hafez.R
 import com.google.android.material.tabs.TabLayout
 
-class NoteFragment : Fragment() {
+class NoteBookFragment : Fragment() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager
     private lateinit var navController: NavController
@@ -24,7 +23,7 @@ class NoteFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.note_fragment, container, false)
+        return inflater.inflate(R.layout.notebook_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
