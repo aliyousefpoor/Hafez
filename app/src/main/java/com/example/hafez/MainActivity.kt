@@ -27,12 +27,12 @@ class MainActivity : AppCompatActivity() {
         searchNavHost = findViewById(R.id.searchNavHostFragment)
         noteNavHost = findViewById(R.id.noteNavHostFragment)
         bottomNavigation = findViewById(R.id.bottomNavigation)
-        navController = Navigation.findNavController(this, R.id.mainNavHostFragment)
+        navController = Navigation.findNavController(this, R.id.homeNavHostFragment)
 
 
 
-        mainNavHost.visibility = View.VISIBLE
-        homeNavHost.visibility = View.GONE
+        mainNavHost.visibility = View.GONE
+        homeNavHost.visibility = View.VISIBLE
         listNavHost.visibility = View.GONE
         omenNavHost.visibility = View.GONE
         searchNavHost.visibility = View.GONE

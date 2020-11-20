@@ -48,15 +48,15 @@ class SearchFragment : Fragment() {
         meanCount = view.findViewById(R.id.meanCount)
 
         search.addTextChangedListener(object : TextWatcher {
-            val handler = Handler(Looper.getMainLooper())
+//            val handler = Handler(Looper.getMainLooper())
 
             override fun afterTextChanged(s: Editable?) {
                 close.setImageResource(R.drawable.close)
                 highLight(s.toString())
-                val runnable = Runnable {
-                    filterWord(s.toString())
-                }
-                handler.postDelayed(runnable, 3000)
+//                val runnable = Runnable {
+//                    filterWord(s.toString())
+//                }
+//                handler.postDelayed(runnable, 3000)
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -74,21 +74,21 @@ class SearchFragment : Fragment() {
             close.setImageResource(R.color.white)
         }
 
-        val arrayList: MutableList<String> = ArrayList()
-        adapter = SearchAdapter(arrayList, requireContext())
-        recyclerView.adapter = adapter
-        val linearLayoutManager = LinearLayoutManager(requireContext())
-        recyclerView.layoutManager = linearLayoutManager
+//        val arrayList: MutableList<String> = ArrayList()
+//        adapter = SearchAdapter(arrayList, requireContext())
+//        recyclerView.adapter = adapter
+//        val linearLayoutManager = LinearLayoutManager(requireContext())
+//        recyclerView.layoutManager = linearLayoutManager
     }
 
 
-    private fun filterWord(stringList: String) {
-
-        if (meanText.text.toString().contains(stringList, true)) {
-            searchItem.add(stringList)
-        }
-        adapter.updateList(searchItem)
-    }
+//    private fun filterWord(stringList: String) {
+//
+//        if (meanText.text.toString().contains(stringList, true)) {
+//            searchItem.add(stringList)
+//        }
+//        adapter.updateList(searchItem)
+//    }
 
     fun highLight(string: String) {
 
