@@ -21,13 +21,14 @@ class SearchAdapter(private var arrayList: MutableList<String>, private var cont
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val searchViewHolder: SearchViewHolder = holder as SearchViewHolder
-        searchViewHolder.onBind(arrayList.get(position))
+        searchViewHolder.onBind(arrayList)
     }
 
     class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val searchText: TextView = itemView.findViewById(R.id.searchText)
-        fun onBind(text: String) {
-            searchText.text = text
+        fun onBind(text: MutableList<String>) {
+            searchText.text = text[position]
+            text.clear()
         }
     }
 

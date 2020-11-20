@@ -15,6 +15,7 @@
         android:drawableEnd="@drawable/search_style"
         android:hint="@string/search"
         android:paddingEnd="15dp"
+        android:singleLine="true"
         android:textDirection="rtl"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -71,15 +72,39 @@
                 app:layout_constraintTop_toTopOf="@id/poemIcon" />
 
             <TextView
-                android:id="@+id/poemCount"
+                android:id="@+id/braces1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:text="(۳)"
+                android:text="("
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/poemIcon"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/poemIcon" />
+
+            <TextView
+                android:id="@+id/poemCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:text="۳"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/poemIcon"
+                app:layout_constraintStart_toEndOf="@id/braces1"
+                app:layout_constraintTop_toTopOf="@id/poemIcon" />
+
+            <TextView
+                android:id="@+id/braces2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text=")"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/poemIcon"
+                app:layout_constraintStart_toEndOf="@id/poemCount"
                 app:layout_constraintTop_toTopOf="@id/poemIcon" />
 
             <ImageView
@@ -185,10 +210,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
-                android:layout_marginStart="30dp"
                 android:text="@string/example"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="14sp"
+                android:padding="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/line4" />

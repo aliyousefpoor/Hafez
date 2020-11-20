@@ -1,6 +1,8 @@
 package com.example.hafez.search
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.Html
 import android.text.TextWatcher
@@ -16,7 +18,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hafez.R
-import java.util.ArrayList
+import java.util.*
 
 class SearchFragment : Fragment() {
     private lateinit var close: ImageView
@@ -26,7 +28,7 @@ class SearchFragment : Fragment() {
     private lateinit var adapter: SearchAdapter
     private lateinit var meanText: TextView
     private lateinit var meanCount: TextView
-    private  var searchItem: MutableList<String> =ArrayList()
+    private var searchItem: MutableList<String> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,11 +48,15 @@ class SearchFragment : Fragment() {
         meanCount = view.findViewById(R.id.meanCount)
 
         search.addTextChangedListener(object : TextWatcher {
+            val handler = Handler(Looper.getMainLooper())
+
             override fun afterTextChanged(s: Editable?) {
                 close.setImageResource(R.drawable.close)
-//                searchItem.clear()
-//                filterWord(s.toString())
                 highLight(s.toString())
+                val runnable = Runnable {
+                    filterWord(s.toString())
+                }
+                handler.postDelayed(runnable, 3000)
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -78,24 +84,15 @@ class SearchFragment : Fragment() {
 
     private fun filterWord(stringList: String) {
 
-//        searchItem = ArrayList()
-
-        for (d in meanText.text.toString()) {
-            if (stringList in d.toString()) {
-                searchItem.add(d.toString())
-            }
-            if (search.text.isEmpty()) {
-                meanCount.text = "0"
-            } else {
-                meanCount.text = searchItem.size.toString()
-                adapter.updateList(searchItem)
-            }
+        if (meanText.text.toString().contains(stringList, true)) {
+            searchItem.add(stringList)
         }
+        adapter.updateList(searchItem)
     }
 
     fun highLight(string: String) {
 
-        val replaceWith = "<span style ='background-color:yellow'>" + string + "</span>"
+        val replaceWith = "<span style ='background-color:yellow'>$string</span>"
         val originalText = meanText.text.toString()
         val modifiedText = originalText.replace(string.toRegex(), replaceWith)
         meanText.text = Html.fromHtml(modifiedText)
