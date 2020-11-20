@@ -66,6 +66,7 @@ It is free and open source software; its source code is known as Android Open So
     </string>
     <string name="explainAndMean">شرح و معنی</string>
     <string name="poems">غزل ها</string>
+    <string name="write">بنویسید</string>
 
 
 </resources>

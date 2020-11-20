@@ -26,7 +26,7 @@ class SearchFragment : Fragment() {
     private lateinit var adapter: SearchAdapter
     private lateinit var meanText: TextView
     private lateinit var meanCount: TextView
-    private lateinit var searchItem: MutableList<String>
+    private  var searchItem: MutableList<String> =ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,7 +48,8 @@ class SearchFragment : Fragment() {
         search.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 close.setImageResource(R.drawable.close)
-                filterWord(s.toString())
+//                searchItem.clear()
+//                filterWord(s.toString())
                 highLight(s.toString())
             }
 
@@ -77,7 +78,7 @@ class SearchFragment : Fragment() {
 
     private fun filterWord(stringList: String) {
 
-        searchItem = ArrayList()
+//        searchItem = ArrayList()
 
         for (d in meanText.text.toString()) {
             if (stringList in d.toString()) {

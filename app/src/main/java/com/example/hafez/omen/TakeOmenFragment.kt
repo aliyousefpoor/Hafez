@@ -1,12 +1,13 @@
 package com.example.hafez.omen
 
+import android.os.Build
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -40,8 +41,9 @@ class TakeOmenFragment : Fragment() {
         poem = view.findViewById(R.id.takeOmenPoem)
         interpretation = view.findViewById(R.id.omenInterpretation)
         navController = Navigation.findNavController(view)
-
         poem.setTextIsSelectable(true)
+        textSelectionAction()
+
         commentBubble.visibility = View.GONE
         commentHeart.visibility = View.GONE
         comment.visibility = View.GONE
@@ -83,5 +85,29 @@ class TakeOmenFragment : Fragment() {
         interpretation.setOnClickListener {
             navController.navigate(R.id.action_takeOmenFragment_to_interpretationFragment)
         }
+    }
+
+    private fun textSelectionAction() {
+
+//        poem.customSelectionActionModeCallback = object : ActionMode.Callback {
+//            override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
+//                if (item?.itemId == 0) {
+//                    Toast.makeText(requireContext(), "Ali", Toast.LENGTH_SHORT).show()
+//                }
+//                return true
+//            }
+//
+//            override fun onCreateActionMode(mode: ActionMode?, menu: Menu?): Boolean {
+//                menu?.add(0, 0, 0, "Ali")
+//                return true
+//            }
+//
+//            override fun onPrepareActionMode(mode: ActionMode?, menu: Menu?): Boolean {
+//                return false
+//            }
+//
+//            override fun onDestroyActionMode(mode: ActionMode?) {
+//            }
+//        }
     }
 }
