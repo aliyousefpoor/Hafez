@@ -83,7 +83,9 @@ class TakeOmenFragment : Fragment() {
         }
 
         interpretation.setOnClickListener {
-            navController.navigate(R.id.action_takeOmenFragment_to_interpretationFragment)
+//            navController.navigate(R.id.action_takeOmenFragment_to_interpretationFragment)
+            val interpretationFragment = InterpretationFragment()
+            interpretationFragment.show(parentFragmentManager,"InterpretationFragment")
         }
     }
 
