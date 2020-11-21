@@ -25,6 +25,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginVertical="5dp"
                 android:padding="8dp"
+                android:gravity="center"
                 android:text="@string/poem1"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
